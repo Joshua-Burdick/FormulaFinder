@@ -10,7 +10,7 @@ int main() {
 
 	std::string input;
 	std::string params;
-	
+
 	//Get the subject
 	std::cout << "Enter the subject here (type 'skip' if unsure): ";
 	std::getline(std::cin, input);

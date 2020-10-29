@@ -8,7 +8,7 @@ void VarRec::select(std::string field, std::string input) {
 	if (field.at(0) == 'k') {
 		type = 'k';
 	}
-	else if(field.at(0) == 'f') {
+	else if (field.at(0) == 'f') {
 		type = 'f';
 	}
 	else {
