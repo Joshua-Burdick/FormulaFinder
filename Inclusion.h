@@ -2,8 +2,10 @@
 
 //External Libraries
 #include <iostream>
-#include <array>
 #include <string>
+#include <array>
+#include <vector>
+#include <istream>
 
 //Internal Headers
 #include "Dictionary.h"
