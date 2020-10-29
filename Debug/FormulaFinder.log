@@ -1,4 +1,2 @@
 ﻿  VarRec.cpp
-C:\Users\Joshua\Desktop\Dev\FormulaFinder\FormulaFinder\VarRec.cpp(7,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Joshua\Desktop\Dev\FormulaFinder\FormulaFinder\VarRec.cpp(12,21): warning C4018: '<': signed/unsigned mismatch
-  FormulaFinder.vcxproj -> C:\Users\Joshua\Desktop\Dev\FormulaFinder\FormulaFinder\Debug\FormulaFinder.exe
+  FormulaFinder.vcxproj -> C:\Users\Joshua\Desktop\Dev\FormulaFinder\Debug\FormulaFinder.exe

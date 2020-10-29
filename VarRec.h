@@ -5,9 +5,9 @@ class VarRec {
 
 private:
 	char type;
-	std::string userIn;
+	std::string params;
 public:
 	VarRec();
-	void select(std::string field);
+	void select(std::string field, std::string input);
 	void parse();
 };
