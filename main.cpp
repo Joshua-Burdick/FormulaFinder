@@ -4,21 +4,29 @@
 VarRec rec;
 
 //Interpret Commands
-void Commands(std::string input);
+void Commands(std::string input, std::string params);
 
 int main() {
 
 	std::string input;
-	
+	std::string params;
+
+	//Get the subject
 	std::cout << "Enter the subject here (type 'skip' if unsure): ";
-	std::cin >> input;
+	std::getline(std::cin, input);
 	std::cout << std::endl;
 
-	Commands(input);
+	//Get initial variables
+	std::cout << "Enter initial paramters: ";
+	std::getline(std::cin, params);
+	std::cout << std::endl;
+
+	Commands(input, params);
 
 	return 0;
 }
 
-void Commands(std::string input) {
-	rec.select(input);
+void Commands(std::string input, std::string params) {
+	rec.select(input, params);
+	rec.parse();
 }

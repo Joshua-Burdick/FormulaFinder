@@ -1,4 +1,9 @@
 ﻿  VarRec.cpp
-C:\Users\Joshua\Desktop\Dev\FormulaFinder\FormulaFinder\VarRec.cpp(7,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Joshua\Desktop\Dev\FormulaFinder\FormulaFinder\VarRec.cpp(12,21): warning C4018: '<': signed/unsigned mismatch
-  FormulaFinder.vcxproj -> C:\Users\Joshua\Desktop\Dev\FormulaFinder\FormulaFinder\Debug\FormulaFinder.exe
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.h(9,35): warning C4200: nonstandard extension used: zero-sized array in struct/union
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.h(9,35): message : This member will be ignored by a defaulted constructor or copy/move assignment operator
+  main.cpp
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.h(9,35): warning C4200: nonstandard extension used: zero-sized array in struct/union
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.h(9,35): message : This member will be ignored by a defaulted constructor or copy/move assignment operator
+  Generating Code...
+  LINK : C:\Users\Joshua\Desktop\Dev\FormulaFinder\Debug\FormulaFinder.exe not found or not built by the last incremental link; performing full link
+  FormulaFinder.vcxproj -> C:\Users\Joshua\Desktop\Dev\FormulaFinder\Debug\FormulaFinder.exe

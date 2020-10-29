@@ -2,11 +2,13 @@
 
 VarRec::VarRec() {}
 
-void VarRec::select(std::string field) {
+void VarRec::select(std::string field, std::string input) {
+	params = input;
+
 	if (field.at(0) == 'k') {
 		type = 'k';
 	}
-	else if(field.at(0) == 'f') {
+	else if (field.at(0) == 'f') {
 		type = 'f';
 	}
 	else {
@@ -18,14 +20,14 @@ void VarRec::parse() {
 
 	//TODO: KINEMATICS RECOGNITION
 	if (type == 'k') {
-		std::cout << "Input initial parameters: ";
-		std::cin >> userIn; //Get user's variables and input
+		std::cout << "Selected: Kinematics" << std::endl;
+		std::cout << params << std::endl;
 	}
 
 	//TODO: FORCES RECOGNITION
 	else if (type == 'f') {
-		std::cout << "Input initial parameters: ";
-		std::cin >> userIn; //Get user's variables and input
+		std::cout << "Selected: Forces" << std::endl;
+		std::cout << params << std::endl;
 	}
 
 	else if (type == NULL) {

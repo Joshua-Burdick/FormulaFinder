@@ -1,2 +1,4 @@
 C:\Users\Joshua\Desktop\Dev\FormulaFinder\FormulaFinder\Debug\FormulaFinder.exe
 C:\Users\Joshua\Desktop\Dev\FormulaFinder\FormulaFinder\Debug\FormulaFinder.pdb
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\Debug\FormulaFinder.exe
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\Debug\FormulaFinder.pdb
