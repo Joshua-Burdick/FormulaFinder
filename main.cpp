@@ -27,6 +27,5 @@ int main() {
 }
 
 void Commands(std::string input, std::string params) {
-	rec.select(input, params);
-	rec.parse();
+	rec.parse(input, params);
 }

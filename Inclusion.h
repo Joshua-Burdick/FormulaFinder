@@ -10,3 +10,4 @@
 //Internal Headers
 #include "Dictionary.h"
 #include "VarRec.h"
+#include "Handler.h"
