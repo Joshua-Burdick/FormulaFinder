@@ -21,9 +21,6 @@
     <ClCompile Include="VarRec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Handler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VarRec.h">
@@ -32,10 +29,7 @@
     <ClInclude Include="Inclusion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dictionary.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Handler.h">
+    <ClInclude Include="Formulas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

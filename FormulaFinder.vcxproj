@@ -139,13 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Handler.cpp" />
     <ClCompile Include="VarRec.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Dictionary.h" />
-    <ClInclude Include="Handler.h" />
+    <ClInclude Include="Formulas.h" />
     <ClInclude Include="Inclusion.h" />
     <ClInclude Include="VarRec.h" />
   </ItemGroup>

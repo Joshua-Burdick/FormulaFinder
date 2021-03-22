@@ -1,4 +1,5 @@
-﻿  VarRec.cpp
-  main.cpp
-  Generating Code...
-  FormulaFinder.vcxproj -> C:\Users\Joshua\Desktop\Dev\FormulaFinder\Debug\FormulaFinder.exe
+﻿  main.cpp
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\main.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\main.cpp(31,25): error C2664: 'void VarRec::parse(std::string,std::vector<std::string,std::allocator<std::string>>)': cannot convert argument 2 from 'std::string' to 'std::vector<std::string,std::allocator<std::string>>'
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\main.cpp(31,19): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.h(11,7): message : see declaration of 'VarRec::parse'

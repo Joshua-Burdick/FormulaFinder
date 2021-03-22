@@ -2,18 +2,33 @@
 
 VarRec::VarRec() {}
 
-void VarRec::parse(std::string field, std::string input) {
+void VarRec::parse(std::string field, std::vector<std::string> input) {
 	params = input;
 
-	//TODO: KINEMATICS RECOGNITION
-	if (tolower(field.at(0)) == 'k') {
-		std::cout << "Selected: Kinematics" << std::endl;
-		std::cout << params << std::endl;
+	for (int i = 0; i < C_OVERLORD.size(); i++) {
+		for (int j = 0; j < C_OVERLORD[i].size(); j++) {
+			std::cout << C_OVERLORD[i][j] << std::endl;
+		}
+	}
+}
+
+const std::vector<std::string> VarRec::split(const std::string& s, const char& c) {
+	std::string buff{ "" };
+	std::vector<std::string> v;
+
+	for (auto n : s)
+	{
+		if (n != c) buff += n;
+
+		else {
+			if (n == c && buff != "") {
+				v.push_back(buff);
+				buff = "";
+			}
+		}
 	}
 
-	//TODO: FORCES RECOGNITION
-	else if (tolower(field.at(0)) == 'f') {
-		std::cout << "Selected: Forces" << std::endl;
-		std::cout << params << std::endl;
-	}
+	if (buff != "") v.push_back(buff);
+
+	return v;
 }

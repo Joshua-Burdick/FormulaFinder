@@ -1,6 +1,7 @@
 #include "Inclusion.h"
+#include "VarRec.h";
 
-//Global variables for init
+//Global init
 VarRec rec;
 
 //Interpret Commands
