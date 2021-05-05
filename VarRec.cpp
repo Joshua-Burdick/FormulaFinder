@@ -2,16 +2,13 @@
 
 VarRec::VarRec() {}
 
-void VarRec::parse(std::string field, std::vector<std::string> input) {
+void VarRec::parse(std::string field, std::string input) {
 	params = input;
-
-	for (int i = 0; i < C_OVERLORD.size(); i++) {
-		for (int j = 0; j < C_OVERLORD[i].size(); j++) {
-			std::cout << C_OVERLORD[i][j] << std::endl;
-		}
-	}
+	
 }
 
+
+//Found on Stack Overflow to split strings via delimiter into a vector
 const std::vector<std::string> VarRec::split(const std::string& s, const char& c) {
 	std::string buff{ "" };
 	std::vector<std::string> v;
