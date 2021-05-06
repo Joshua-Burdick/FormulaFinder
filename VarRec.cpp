@@ -2,7 +2,7 @@
 
 VarRec::VarRec() {}
 
-void VarRec::parse(std::string field, std::string input) {
+void VarRec::parse(std::string input) {
 	params = input;
 	
 }
