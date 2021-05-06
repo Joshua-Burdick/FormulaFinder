@@ -29,7 +29,7 @@
     <ClInclude Include="Inclusion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dictionary.h">
+    <ClInclude Include="Formulas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

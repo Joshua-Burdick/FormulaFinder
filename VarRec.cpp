@@ -2,35 +2,30 @@
 
 VarRec::VarRec() {}
 
-void VarRec::select(std::string field, std::string input) {
+void VarRec::parse(std::string input) {
 	params = input;
-
-	if (field.at(0) == 'k') {
-		type = 'k';
-	}
-	else if (field.at(0) == 'f') {
-		type = 'f';
-	}
-	else {
-		type = NULL;
-	}
+	
 }
 
-void VarRec::parse() {
 
-	//TODO: KINEMATICS RECOGNITION
-	if (type == 'k') {
-		std::cout << "Selected: Kinematics" << std::endl;
-		std::cout << params << std::endl;
+//Found on Stack Overflow to split strings via delimiter into a vector
+const std::vector<std::string> VarRec::split(const std::string& s, const char& c) {
+	std::string buff{ "" };
+	std::vector<std::string> v;
+
+	for (auto n : s)
+	{
+		if (n != c) buff += n;
+
+		else {
+			if (n == c && buff != "") {
+				v.push_back(buff);
+				buff = "";
+			}
+		}
 	}
 
-	//TODO: FORCES RECOGNITION
-	else if (type == 'f') {
-		std::cout << "Selected: Forces" << std::endl;
-		std::cout << params << std::endl;
-	}
+	if (buff != "") v.push_back(buff);
 
-	else if (type == NULL) {
-		//TODO: AMBIGUOUS FORM
-	}
+	return v;
 }

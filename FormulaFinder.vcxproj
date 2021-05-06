@@ -143,7 +143,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Dictionary.h" />
+    <ClInclude Include="Formulas.h" />
     <ClInclude Include="Inclusion.h" />
     <ClInclude Include="VarRec.h" />
   </ItemGroup>

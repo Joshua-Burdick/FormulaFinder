@@ -1,19 +1,13 @@
 #pragma once
-#include "Inclusion.h"
+#include "Formulas.h"
 
 class VarRec {
 
 private:
-	char type;
 	std::string params;
-	std::vector<std::string> varArr[];
-
-	template<char delimiter>
-	class WordDelimitedBy : public std::string
-	{};
-
+	std::vector<std::string> varArr;
 public:
 	VarRec();
-	void select(std::string field, std::string input);
-	void parse();
+	void parse(std::string input);
+	const std::vector<std::string> split(const std::string& s, const char& c);
 };

@@ -1,9 +1,7 @@
 ﻿  VarRec.cpp
-C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.h(9,35): warning C4200: nonstandard extension used: zero-sized array in struct/union
-C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.h(9,35): message : This member will be ignored by a defaulted constructor or copy/move assignment operator
-  main.cpp
-C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.h(9,35): warning C4200: nonstandard extension used: zero-sized array in struct/union
-C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.h(9,35): message : This member will be ignored by a defaulted constructor or copy/move assignment operator
-  Generating Code...
-  LINK : C:\Users\Joshua\Desktop\Dev\FormulaFinder\Debug\FormulaFinder.exe not found or not built by the last incremental link; performing full link
-  FormulaFinder.vcxproj -> C:\Users\Joshua\Desktop\Dev\FormulaFinder\Debug\FormulaFinder.exe
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.cpp(8,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.cpp(9,21): warning C4018: '<': signed/unsigned mismatch
+main.obj : error LNK2005: "class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > C_KINEARR" (?C_KINEARR@@3V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@A) already defined in VarRec.obj
+main.obj : error LNK2005: "class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > C_FORCEARR" (?C_FORCEARR@@3V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@A) already defined in VarRec.obj
+main.obj : error LNK2005: "class std::vector<class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > >,class std::allocator<class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > > > C_OVERLORD" (?C_OVERLORD@@3V?$vector@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@V?$allocator@V?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@2@@std@@A) already defined in VarRec.obj
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\Debug\FormulaFinder.exe : fatal error LNK1169: one or more multiply defined symbols found
