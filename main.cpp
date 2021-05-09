@@ -5,7 +5,7 @@
 VarRec rec;
 
 int main() {
-
+	
 	std::string params;
 
 	//Get initial variables
