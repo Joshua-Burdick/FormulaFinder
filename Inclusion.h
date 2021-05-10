@@ -5,11 +5,14 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <ctype.h> //for isalpha() and isdigit()
+
+using namespace std;
 
 //Formula Dictionary
 // pos | initial vel. | final vel. | accel. | time | force | mass | normal force | force parallel (slope) | force of friction | coeff. of friction | angle (slope)
 // x | v0 | v | a | t | F | m | Fn | Fp | Ff | mu | theta
-const static std::unordered_map<std::string, std::string> formulas = {
+const static unordered_map<string, string> formulas = {
 	{"111010000000", "x = x0 + avg[v]*t"},
 	{"011000000000", "avg[v] = (v0 + v)/2"},
 	{"011110000000", "v = v0 + a*t"},

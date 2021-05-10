@@ -1,3 +1,3 @@
-﻿  main.cpp
-C:\Users\Joshua\Desktop\Dev\FormulaFinder\main.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+﻿  VarRec.cpp
+C:\Users\Joshua\Desktop\Dev\FormulaFinder\VarRec.cpp(11,21): warning C4018: '<': signed/unsigned mismatch
   FormulaFinder.vcxproj -> C:\Users\Joshua\Desktop\Dev\FormulaFinder\Debug\FormulaFinder.exe
