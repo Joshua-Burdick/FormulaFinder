@@ -24,7 +24,9 @@ void VarRec::parse(string input) {
 		cout << search << endl << endl;
 	}
 
-	//formulas.at(key);
+	if (key != "NULL") {
+		cout << formulas.at(key) << endl;
+	}
 }
 
 //Logic for determining which variable the input value is
@@ -33,22 +35,40 @@ void VarRec::find(string var) {
 	if (var == "m") {
 		key[0] = '1';
 	}
-	//***TODO: HANDLE VELOCITIES***
+	//VELOCITIES -- w/ two of them, need to handle determining which it is.
+	else if (var == "m/s") {
+		if (key.at(1) == '1') {
+			key.at(2) = '1';
+		}
+		else if (key.at(2) == '1') {
+			key.at(1) = '1';
+		}
+		else {
+			if (key.at(4) == '1') {
+				key.at(1) = '1';
+			}
+			else if (key.at(0) == '1' && key.at(4) == '1' && key.at(4) == '0') {
+				key.at(1) = '1';
+				key.at(2) = '1';
+			}
+		}
+	}
 	else if (var == "m/s^2") {
 		key[3] = '1';
 	}
 	else if (var == "s") {
 		key[4] = '1';
 	}
-	else if (var == "N") { //***TODO: INCORPORATE WITH Fn Fp Ff PROPERLY***
+	else if (var == "N" && key.at(12) == '0') {
 		key[5] = '1';
 	}
 	else if (var == "kg") {
 		key[6] = '1';
 	}
-	//***TODO: FORCE NORMAL, FORCE PARALLEL, AND FORCE FRICTION***
-	else if (var == "") {
-		key[10] = '1';
+	//Normal force and parallel force, it states to use first w/ normal (into slope) and second w/ parallel (down slope)
+	else if (var == "N" && key.at(12) == '1') {
+		cout << "Normal force (into the slope): " << formulas.at("000000110001") << endl;
+		cout << "Parallel force (force down the slope): " << formulas.at("000000101001") << endl;
 	}
 	else if (var == "deg" || var == "rad") {
 		key[11] = '1';
