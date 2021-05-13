@@ -5,13 +5,13 @@
 VarRec rec;
 
 int main() {
-
-	std::string params;
+	
+	string params;
 
 	//Get initial variables
-	std::cout << "Enter initial paramters: ";
-	std::getline(std::cin, params);
-	std::cout << std::endl;
+	cout << "Enter initial paramters: ";
+	getline(cin, params);
+	cout << endl;
 
 	rec.parse(params);
 

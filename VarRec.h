@@ -1,13 +1,15 @@
 #pragma once
-#include "Formulas.h"
+#include "Inclusion.h"
 
 class VarRec {
 
 private:
-	std::string params;
-	std::vector<std::string> varArr;
+	vector<string> varArr;
+	string key = "000000000000";
 public:
 	VarRec();
-	void parse(std::string input);
-	const std::vector<std::string> split(const std::string& s, const char& c);
+	void parse(string input);
+	void find(string var);
+	string convert(string in);
+	const vector<string> split(const string& s, const char& c);
 };
