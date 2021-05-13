@@ -12,19 +12,24 @@ void VarRec::parse(string input) {
 
 	for (string i : varArr) {
 		string search = "";
-		for (int j = 0; j < i.length(); j++) { //if it's a letter add to the string (the unit type)
-			cout << i.at(j) << " " << isalpha(i.at(j)) << " "; //**DEBUGGING**
-			if (isalpha(i.at(j))) {
-				search += i.at(j);
+		if (i == varArr[0]) {
+			search = convert(i);
+		}
+		else {
+			for (int j = 0; j < i.length(); j++) { //if it's a letter add to the string (the unit type)
+				cout << i.at(j) << " " << isalpha(i.at(j)) << " "; //**DEBUGGING**
+				if (isalpha(i.at(j))) {
+					search += i.at(j);
+				}
+				else if (i.at(j) == '/') { //catch slashes for fractions
+					search += i.at(j);
+				}
+				else if (i.at(j) == '^' && isdigit(i.at(j + 1))) { //catch exponents (i.e. acceleration)
+					search += i.at(j);
+					search += i.at(j + 1);
+				}
+				cout << endl;
 			}
-			else if (i.at(j) == '/') { //catch slashes for fractions
-				search += i.at(j);
-			}
-			else if (i.at(j) == '^' && isdigit(i.at(j + 1))) { //catch exponents (i.e. acceleration)
-				search += i.at(j);
-				search += i.at(j + 1);
-			}
-			cout << endl;
 		}
 		cout << search << endl << endl; //**DEBUGGING**
 		find(search);
@@ -78,9 +83,43 @@ void VarRec::find(string var) {
 		cout << "Parallel force (force down the slope): " << formulas.at("000000101001") << endl;
 		key = "NULL";
 	}
+	else if (var == "") {
+		key[10] = '1';
+	}
 	else if (var == "deg" || var == "rad") {
 		key[11] = '1';
 	}
+}
+
+string VarRec::convert(string in) {
+	string search;
+
+	if (in == "x") {
+		search = "m";
+	}
+	else if (in == "v0" || in == "v") {
+		search = "m/s";
+	}
+	else if (in == "a") {
+		search = "m/s^2";
+	}
+	else if (in == "t") {
+		search = "s";
+	}
+	else if (in == "F" || in == "Fn" || in == "Fp" || in == "Ff") {
+		search = "N";
+	}
+	else if (in == "m") {
+		search = "kg";
+	}
+	else if (in == "mu") {
+		search = "";
+	}
+	else if (in == "theta") {
+		search = "deg";
+	}
+
+	return search;
 }
 
 //Found on Stack Overflow to split strings via delimiter into a vector

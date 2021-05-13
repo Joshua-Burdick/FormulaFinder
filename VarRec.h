@@ -10,5 +10,6 @@ public:
 	VarRec();
 	void parse(string input);
 	void find(string var);
+	string convert(string in);
 	const vector<string> split(const string& s, const char& c);
 };
