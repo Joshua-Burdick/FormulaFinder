@@ -36,8 +36,12 @@ void VarRec::parse(string input) {
 		cout << key << endl << endl;
 	}
 
-	if (key != "NULL") {
-		cout << formulas.at(key) << endl;
+	//Printing the formula -- NULL if error, ignores DONE, simply an indicator it was already printed
+	if (key != "NULL" && key != "DONE") {
+		cout << formulas.at(key) << endl << endl;
+	}
+	else if (key == "NULL") {
+		cout << "An error has occurred. It is likely the unit(s) wasn't recognized. Please try again." << endl << endl;
 	}
 }
 
@@ -79,15 +83,18 @@ void VarRec::find(string var) {
 	}
 	//Normal force and parallel force, it states to use first w/ normal (into slope) and second w/ parallel (down slope)
 	else if (var == "N" && key.at(11) == '1') {
-		cout << "Normal force (into the slope): " << formulas.at("000000110001") << endl;
+		cout << "Normal force (force into the slope): " << formulas.at("000000110001") << endl;
 		cout << "Parallel force (force down the slope): " << formulas.at("000000101001") << endl;
-		key = "NULL";
+		key = "DONE"; //Results already printed
 	}
 	else if (var == "") {
 		key[10] = '1';
 	}
 	else if (var == "deg" || var == "rad") {
 		key[11] = '1';
+	}
+	else {
+		key = "NULL"; //if it's not a recognized variable
 	}
 }
 
@@ -117,6 +124,9 @@ string VarRec::convert(string in) {
 	}
 	else if (in == "theta") {
 		search = "deg";
+	}
+	else {
+		search = "NULL";
 	}
 
 	return search;
