@@ -1,2 +1,4 @@
 # FormulaFinder
-For my Senior Project
+/this is a test
+\test
+$more tests
