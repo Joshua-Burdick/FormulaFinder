@@ -132,24 +132,26 @@ string VarRec::convert(string in) {
 	return search;
 }
 
-//Found on Stack Overflow to split strings via delimiter into a vector
+//Adapted from examples on Stack Overflow to split strings via delimiter into a vector
 const vector<string> VarRec::split(const string& s, const char& c) {
 	string buff{ "" };
 	vector<string> v;
 
-	for (auto n : s)
+	for (char n : s)
 	{
 		if (n != c) buff += n;
 
 		else {
-			if (n == c && buff != "") {
+			if (n == c && buff != "") { //add the string to the vector at the split point
 				v.push_back(buff);
 				buff = "";
 			}
 		}
 	}
 
-	if (buff != "") v.push_back(buff);
+	if (buff != "") { //final catchall if there's anything left over at the end
+		v.push_back(buff);
+	}
 
 	return v;
 }
