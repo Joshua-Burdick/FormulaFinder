@@ -134,7 +134,7 @@ string VarRec::convert(string in) {
 
 //Adapted from examples on Stack Overflow to split strings via delimiter into a vector
 const vector<string> VarRec::split(const string& s, const char& c) {
-	string buff{ "" };
+	string buff = "";
 	vector<string> v;
 
 	for (char n : s)
