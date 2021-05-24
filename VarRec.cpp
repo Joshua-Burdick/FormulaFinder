@@ -5,9 +5,9 @@ VarRec::VarRec() {}
 void VarRec::parse(string input) {
 
 	varArr = split(input, ' ');
-	for (auto i : varArr) { //**DEBUGGING**
+	/*for (auto i : varArr) { //**DEBUGGING**
 		cout << i << endl;
-	}
+	}*/
 	cout << endl;
 
 	for (string i : varArr) {
@@ -17,7 +17,7 @@ void VarRec::parse(string input) {
 		}
 		else {
 			for (int j = 0; j < i.length(); j++) { //if it's a letter add to the string (the unit type)
-				cout << i.at(j) << " " << isalpha(i.at(j)) << " "; //**DEBUGGING**
+				//cout << i.at(j) << " " << isalpha(i.at(j)) << " "; //**DEBUGGING**
 				if (isalpha(i.at(j))) {
 					search += i.at(j);
 				}
@@ -31,9 +31,9 @@ void VarRec::parse(string input) {
 				cout << endl;
 			}
 		}
-		cout << search << endl << endl; //**DEBUGGING**
+		//cout << search << endl << endl; //**DEBUGGING**
 		find(search);
-		cout << key << endl << endl;
+		//cout << key << endl << endl; //**DEBUGGING**
 	}
 
 	//Printing the formula -- NULL if error, ignores DONE, simply an indicator it was already printed
@@ -63,7 +63,7 @@ void VarRec::find(string var) {
 			if (key[4] == '1') {
 				key[1] = '1';
 			}
-			else if (key.at(4) == '0') {
+			else if (key[4] == '0') {
 				key[1] = '1';
 				key[2] = '1';
 			}
@@ -82,7 +82,7 @@ void VarRec::find(string var) {
 		key[6] = '1';
 	}
 	//Normal force and parallel force, it states to use first w/ normal (into slope) and second w/ parallel (down slope)
-	else if (var == "N" && key.at(11) == '1') {
+	else if (var == "N" && key[11] == '1') {
 		cout << "Normal force (force into the slope): " << formulas.at("000000110001") << endl;
 		cout << "Parallel force (force down the slope): " << formulas.at("000000101001") << endl;
 		key = "DONE"; //Results already printed
@@ -134,7 +134,7 @@ string VarRec::convert(string in) {
 
 //Adapted from examples on Stack Overflow to split strings via delimiter into a vector
 const vector<string> VarRec::split(const string& s, const char& c) {
-	string buff = "";
+	string buff{ "" };
 	vector<string> v;
 
 	for (char n : s)
