@@ -7,8 +7,8 @@ void VarRec::parse(string input) {
 	varArr = split(input, ' ');
 	/*for (auto i : varArr) { //**DEBUGGING**
 		cout << i << endl;
-	}*/
-	cout << endl;
+	}
+	cout << endl;*/
 
 	for (string i : varArr) {
 		string search = "";
@@ -28,7 +28,7 @@ void VarRec::parse(string input) {
 					search += i.at(j);
 					search += i.at(j + 1);
 				}
-				cout << endl;
+				//cout << endl; //**DEBUGGING**
 			}
 		}
 		//cout << search << endl << endl; //**DEBUGGING**
