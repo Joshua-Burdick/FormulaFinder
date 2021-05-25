@@ -45,3 +45,8 @@ For "corresponding characters", each variable is assigned an index of the key, l
 >  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
 
 These are the position, initial velocity, final velocity, acceleration, time, force, mass, normal force (force into a slope), force parallel (force down a slope), force of friction, coefficient of friction, and angle (of a slope), respectively.
+
+### Printing the Results
+Once the key has been determined, it is time to print the proper formula. Firstly, if there was an issue determining the key, the key will return `"NULL"` and print the error message `"An error has occurred. It is likely the unit(s) wasn't recognized. Please try again."` If it prints the normal force or parallel force formulas (the exceptions to the key-building method), the formulas are printed while searching for variables (since they are last by convention of the input). The key then becomes "DONE", at which point the program will stop, not printing or attempting to print something again.
+
+Otherwise, it prints the proper formula based on the key that has been built within the program, and the program is complete.
