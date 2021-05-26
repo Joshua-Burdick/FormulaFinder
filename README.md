@@ -50,3 +50,6 @@ These are the position, initial velocity, final velocity, acceleration, time, fo
 Once the key has been determined, it is time to print the proper formula. Firstly, if there was an issue determining the key, the key will return `"NULL"` and print the error message `"An error has occurred. It is likely the unit(s) wasn't recognized. Please try again."` If it prints the normal force or parallel force formulas (the exceptions to the key-building method), the formulas are printed while searching for variables (since they are last by convention of the input). The key then becomes "DONE", at which point the program will stop, not printing or attempting to print something again.
 
 Otherwise, it prints the proper formula based on the key that has been built within the program, and the program is complete.
+
+### Credits
+While I have written the entirety of the code myself for the initial prototype (my project), afterwards KifoPL has come in to help me with any existing issues and work on ideas for developing it in the future.
