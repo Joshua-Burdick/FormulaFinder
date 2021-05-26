@@ -52,4 +52,4 @@ Once the key has been determined, it is time to print the proper formula. Firstl
 Otherwise, it prints the proper formula based on the key that has been built within the program, and the program is complete.
 
 ### Credits
-While I have written the entirety of the code myself for the initial prototype (my project). This means that everything published up until 5/26/21 is entirely my code, afterwards KifoPL has come in to help me look through and fix any existing issues and work on ideas for developing it in the future (hence why he shows up as a contributor). Sometimes a second opinion is very valuable. Wanted to give some thanks to him.
+I have written the entirety of the code myself for the initial prototype (my project). This means that everything published up until 5/26/21 is entirely my code, afterwards KifoPL has come in to help me look through and fix any existing issues and work on ideas for developing it in the future (hence why he shows up as a contributor). Sometimes a second opinion is very valuable. Wanted to give some thanks to him.
