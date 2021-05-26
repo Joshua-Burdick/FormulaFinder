@@ -24,7 +24,7 @@ void VarRec::parse(string input) {
 				else if (i.at(j) == '/') { //catch slashes for fractions
 					search += i.at(j);
 				}
-				else if (i.at(j) == '^' && isdigit(i.at(j + 1))) { //catch exponents (i.e. acceleration)
+				else if (i.at(j) == '^' && j < i.length() - 1 && isdigit(i.at(j + 1))) { //catch exponents (i.e. acceleration)
 					search += i.at(j);
 					search += i.at(j + 1);
 				}
